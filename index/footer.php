@@ -7,43 +7,42 @@
 	<div class="container">
 
 		<!-- About -->
-		<div class="four columns">
+		<div class="eight columns">
 			<h4>BPM Jawa Timur</h4>
 			<ul class="contact-details-alt">
-				<li><i class="halflings white map-marker"></i> <p><strong>Address:</strong> 123 Seward Street, Oklahoma City, USA</p></li>
-				<li><i class="halflings white user"></i> <p><strong>Phone:</strong> +48 880 440 110</p></li>
-				<li><i class="halflings white envelope"></i> <p><strong>Email:</strong> <a href="#"><span class="__cf_email__" data-cfemail="0a676b63664a6f726b677a666f24696567">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></p></li>
+				<li><i class="halflings white map-marker"></i> <p><strong>Alamat :</strong> Jalan Rajawali No. 6-8 Surabaya.</p></li>
+				<li><i class="halflings white user"></i> <p><strong>Telepon :</strong> 031-3537537 </p></li>
+				<li><i class="halflings white envelope"></i> <p><strong>Email:</strong> invest@bpm.jatimprov.go.id</p></li>
 			</ul>
 		</div>
 
-		<!-- Contact Details -->
-		<div class="four columns">
-			<h4>Contact Details</h4>
-			
-		</div>
+		
 
 		<!-- Photo Stream -->
-		<div class="four columns">
-			<h4>Photo Stream</h4>
-			<div class="flickr-widget">
-				<!--<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=72179079@N00"></script>
-				-->
-				<div class="clearfix"></div>
+		<div class="eight columns">
+			<h4>Lembaga terkait</h4>
+			
+			<div class="footer-logo">
+				<a href="http://p2t.jatimprov.go.id/" target="_blank">
+				<div class="item">
+					<img src="img/images/sp1.png" width="100" height="100">
+				</div>
+				</a>
+				<a href="http://www.bkpm.go.id/" target="_blank">
+				<div class="item">
+					<img src="img/images/sp2.png" width="100" height="100">
+				</div>
+				</a>
+				<a href="http://jdih.jatimprov.go.id/" target="_blank">
+				<div class="item">
+					<img src="img/images/sp3.png" width="100" height="100">
+				</div>
+				</a>
 			</div>
+
 		</div>
 
-		<!-- Twitter -->
-		<div class="four columns">
-			<h4>Twitter</h4>
-			<ul id="twitter"></ul>
-				<script type="text/javascript">
-					jQuery(document).ready(function($){
-					$.getJSON('twitter.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=Vasterad&count=1'), function(tweets){
-						$("#twitter").html(tz_format_twitter(tweets));
-					}); });
-				</script>
-			<div class="clearfix"></div>
-		</div>
+		
 
 	</div>
 	<!-- 960 Container / End -->

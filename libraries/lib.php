@@ -22,8 +22,23 @@ function format_date($str){
 	$date = explode(" ", $str);
 	$new_date = explode("-", $date[0]);
 	
-	return $new_date[2]."/".$new_date[1]."/".$new_date[0]." ".$date[1];
+	//return $new_date[2]."/".$new_date[1]."/".$new_date[0]." ".$date[1];
+	return $new_date[2]."/".$new_date[1]."/".$new_date[0];
 	
+}
+
+function format_only_date($data){
+	$phpdate = strtotime( $data );
+	$mysqldate = date( 'd', $phpdate );
+
+	return $mysqldate;
+}
+
+function format_only_month($data){
+	$phpdate = strtotime( $data );
+	$mysqldate = date( 'M', $phpdate );
+
+	return $mysqldate;
 }
 	
 ?>

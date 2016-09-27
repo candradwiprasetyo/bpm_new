@@ -1,5 +1,6 @@
 <?php
 include 'libraries/config.php';
+include 'libraries/lib.php';
 ?>
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -42,7 +43,7 @@ include 'libraries/config.php';
 <script src="scripts/jquery.layerslider.min.js"></script>
 <script src="scripts/jquery.shop.js"></script>
 <script src="scripts/custom.js"></script>
-
+<!-- 
 <script type="text/javascript" src="//api.skyscanner.net/api.ashx?key="></script>
 <script type="text/javascript">
    skyscanner.load("snippets","2");
@@ -60,7 +61,7 @@ include 'libraries/config.php';
        snippet.draw(document.getElementById("snippet_searchpanel"));
    }
    skyscanner.setOnLoadCallback(main);
-</script>
+</script> -->
 
 </head>
 <body>
