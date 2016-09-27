@@ -55,7 +55,11 @@
 			//echo $gambar;
 			?>
 
-			<h3 class="margin-reset"><?= $welcome_page_name?></h3><br>
+			<h3 class="margin-reset">
+			<?//= $welcome_page_name?>
+			<div class="welcome-page-title">Selamat datang di </div>
+			<div class="welcome-page-subtitle">Website BPM Provinsi Jawa Timur</div></h3><br>
+
 			<p><img class="image-right" src="<?= $welcome_page_photo?>" style="width: 40%;" alt="">
 			<span class="dropcap gray">D</span>
 			<?php

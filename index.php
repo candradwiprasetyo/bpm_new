@@ -67,19 +67,14 @@ include 'libraries/lib.php';
 <body>
 
 <div id="background_img">
-	<img class="bground" src="images/20140616130641kawah-ijen2a.jpg" width="100%" height="100%">
+	<img class="bground" src="images/20140616130641kawah-ijen2a.jpg">
 </div>
-
+<br>
 <!-- Wrapper / Start -->
 <div id="wrapper">
 
 <!-- Header -->
 <?php include 'index/header.php'; ?>
-
-<div class="clearfix"></div>
-
-</div>
-<!-- 960 Container / End -->
 
 <!-- Navigation -->
 <?php include 'index/navigation.php'; ?>

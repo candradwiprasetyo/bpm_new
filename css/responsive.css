@@ -23,7 +23,7 @@
     .row                                        { margin-bottom: 20px; }
 
     /* Nested Column Classes */
-    #content { overflow: hidden; }
+    #content { overflow: hidden; background: #fff;}
     .column.alpha, .columns.alpha               { margin-left: 0; }
     .column.omega, .columns.omega               { margin-right: 0; }
     .container .floated                         { float: left; display: inline; margin: 0; padding: 0 40px; }
