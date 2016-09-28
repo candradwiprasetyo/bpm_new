@@ -67,7 +67,7 @@
     .container .nine.floated                    { width: 520px; }
     
     .container .ten.columns,
-    .container .ten.floated                     { width: 580px; }
+    .container .ten.floated                     { width: 660px; }
     
     .container .eleven.columns,
     .container .eleven.floated                  { width: 640px; }
@@ -213,6 +213,8 @@
         .three-tables .pricing-table                { width: 218px; }
         .two-tables .pricing-table                  { width: 328px; }
 
+        .container .ten.floated                     { width: 462px; }
+
     }
 
 
@@ -266,7 +268,7 @@
         .container .one-third.column,
         .container .two-thirds.column { width: 260px; }
 
-
+        .container .ten.floated{ width: 320px;  }
         /* Offsets */
         .container .offset-by-one,
         .container .offset-by-two,
@@ -348,8 +350,10 @@
         .four-tables .pricing-table,
         .three-tables .pricing-table,
         .two-tables .pricing-table { width: 360px; }
-
+        .container .ten.floated{ width: 420px; }
     }
+
+
 
 
 /* #Clearing

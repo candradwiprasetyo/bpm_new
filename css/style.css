@@ -1640,7 +1640,7 @@ html[xmlns] .slides {display: block;}
 /* =================================================================== */
 /* Miscellaneous Styles
 ====================================================================== */
-.margin-reset {margin-top: -10px;}
+.margin-reset {margin-top: 0px;}
 .sidebar.padding-reset { padding-top: 0; }
 
 .glyphicons { margin: 15px 0 0 0; }
@@ -4851,6 +4851,11 @@ input[type=search][type=search]::-webkit-input-placeholder {
 	height: 30px;
 	line-height: 30px;
 	border: 1px solid #ccc;
+}
+
+.content-welcome-page{
+	padding-top:20px;
+	padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 768px) {

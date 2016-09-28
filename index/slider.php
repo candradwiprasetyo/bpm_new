@@ -1,5 +1,5 @@
-<div class="home-frame">
-	<div class="slider-frame">
+<div class="container floated" style="background: #f6f6f6">
+	<div class="ten floated" style="padding: 0px;">
 		<!-- FlexSlider  -->
 		<section class="flexslider home">
 			<ul class="slides">
@@ -32,8 +32,8 @@
 		</section>
 		<!-- FlexSlider / End -->
 	</div>
-	<div class="welcome-frame">
-		<div class="content">
+	<div class="five floated">
+		<div class="content-welcome-page">
 			<?php
 			$query_wp = mysql_query("select welcome_page, welcome_page_photo, welcome_page_name from config");
 			$jml_wp = mysql_num_rows($query_wp);
