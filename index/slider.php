@@ -64,7 +64,7 @@
 			<span class="dropcap gray">D</span>
 			<?php
 				$ad = explode(" ", $welcome_page);
-				for($cd=0; $cd<=90; $cd++){
+				for($cd=0; $cd<=80; $cd++){
 				echo $ad[$cd]." ";
 				}echo "... ";
 			?>

@@ -1380,9 +1380,9 @@ body * .ls-container .ls-webkit-hack,
 
 /* FlexSlider Necessary Styles */
 .flexslider {margin: 0; padding: 0; z-index: 1; position: relative;}
-.flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides > li {display: none; max-height: 400px; min-height: 400px;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides > li:first-child {display: block;} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {width: 100%; display: block;}
+.flexslider .slides img {width: 100%; display: block; min-height: 400px;}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
@@ -1398,12 +1398,12 @@ html[xmlns] .slides {display: block;}
 
 /* FlexSlider Default Theme */
 .flexslider {margin: 0 0 0; border: none;position: relative; zoom: 1;}
-.flexslider.home {margin: 0; }
+.flexslider.home {margin: 0; max-height: 400px; min-height: 400px; overflow:hidden; }
 .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
 .loading .flex-viewport {max-height: 300px;}
 .flexslider .slides {zoom: 1;}
 
-.carousel li {margin-right: 5px}
+.carousel li {margin-right: 5px; }
 
 /* Direction Nav */
 .flex-direction-nav {*height: 0;}
@@ -4855,7 +4855,6 @@ input[type=search][type=search]::-webkit-input-placeholder {
 
 .content-welcome-page{
 	padding-top:20px;
-	padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -4869,4 +4868,22 @@ input[type=search][type=search]::-webkit-input-placeholder {
 	.logo-right{
 		display: none;
 	}
+}
+
+@media only screen and (max-width: 959px) and (min-width: 768px){
+	.flexslider .slides > li {display: none; max-height: 300px; min-height: 300px;}
+	.flexslider.home {margin: 0; max-height: 300px; min-height: 300px; overflow:hidden; }
+	.flexslider .slides img { min-height: 300px; }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 480px){
+	.flexslider .slides > li {display: none; max-height: 225px; min-height: 225px;}
+	.flexslider.home {margin: 0; max-height: 225px; min-height: 225px; overflow:hidden; }
+	.flexslider .slides img { min-height: 225px; }
+}
+
+@media only screen and (max-width: 479px){
+	.flexslider .slides > li {display: none; max-height: 175px; min-height: 175px;}
+	.flexslider.home {margin: 0; max-height: 175px; min-height: 175px; overflow:hidden; }
+	.flexslider .slides img { min-height: 175px; }
 }
