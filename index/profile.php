@@ -23,7 +23,7 @@
 				}
 				//echo $gambar;
 				?>
-				<h3><?= $profile_page_name ?></h3>
+				<a href="index.php?page=read_profile"><h3><?= $profile_page_name ?></h3></a>
 				<img src="images/surabaya.jpg" class="profile-img">
 				<p>
 				<?php

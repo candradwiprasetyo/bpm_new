@@ -56,11 +56,12 @@
 			//echo $gambar;
 			?>
 
+			<a href="index.php?page=read_welcome_page">
 			<h3 class="margin-reset">
 			<?//= $welcome_page_name?>
 			<div class="welcome-page-title">Selamat datang di </div>
 			<div class="welcome-page-subtitle">Website BPM Provinsi Jawa Timur</div></h3><br>
-
+			</a>
 			<p><img class="image-right" src="<?= $welcome_page_photo?>" style="width: 40%;" alt="">
 			<span class="dropcap gray">D</span>
 			<?php
