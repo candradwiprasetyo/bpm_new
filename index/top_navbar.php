@@ -19,4 +19,4 @@
     	
   	</div>  
 </div>
-<!-- <div class="top-navbar-visible"></div> -->
+<div class="top-navbar-visible"></div>

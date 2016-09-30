@@ -66,7 +66,7 @@ include 'libraries/lib.php';
 </script> -->
 
 </head>
-<body>
+<body style="top:0px !important;">
 
 <div id="background_img">
 	<!-- <img class="bground" src="images/20140616130641kawah-ijen2a.jpg"> -->
