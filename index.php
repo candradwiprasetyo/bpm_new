@@ -86,7 +86,7 @@ include 'libraries/lib.php';
 <?php include 'index/navigation.php'; ?>
 
 <!-- Content -->
-<?php include 'index/content.php'; ?>
+<?php include 'index/page.php'; ?>
 
 </div>
 <!-- Wrapper / End -->

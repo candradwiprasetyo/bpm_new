@@ -9,7 +9,7 @@
 				$i = 1;
 				while ($data = mysql_fetch_array($excute)){
 				?>
-				<li><img src="<?= $data['location']?>" alt="" />
+				<li><a href="index.php?page=read_slider&id=<?= $data['id']?>"><img src="<?= $data['location']?>" alt="" />
 					<article class="slide-caption">
 						<div class="slide-description">
 							<h3><?php echo $data['name'] ?></h3>
@@ -23,6 +23,7 @@
 							?></p>
 						</div>
 					</article>
+					</a>
 				</li>
 				<?php
 				$i++;

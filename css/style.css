@@ -1850,7 +1850,10 @@ blockquote {
 }
 
 .sidebar,
-.page-content { padding: 40px 0; }
+.page-content { padding: 40px 0; font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 12px !important; }
+.page-content span, .page-content p, .page-content font{
+	font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important; font-size: 12px !important;
+}
 
 h4.margin { margin: 0 0 10px 0; }
 h3.margin { margin: 0 0 10px 0; }
@@ -4729,7 +4732,7 @@ table.standard-table.shop td {
 }
 
 .footer-logo .item{
-	width: 30%;
+	width: 28%;
 	display: inline-block;
 	background: #fff;
 	text-align: center;
