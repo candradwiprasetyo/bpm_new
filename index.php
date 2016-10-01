@@ -44,8 +44,8 @@ include 'libraries/lib.php';
 <script src="scripts/jquery.layerslider.min.js"></script>
 <script src="scripts/jquery.shop.js"></script>
 <script src="scripts/custom.js"></script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
-<!-- 
+<!-- <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+
 <script type="text/javascript" src="//api.skyscanner.net/api.ashx?key="></script>
 <script type="text/javascript">
    skyscanner.load("snippets","2");
@@ -69,7 +69,7 @@ include 'libraries/lib.php';
 <body style="top:0px !important;">
 
 <div id="background_img">
-	<!-- <img class="bground" src="images/20140616130641kawah-ijen2a.jpg"> -->
+	<img class="bground" src="images/20140616130641kawah-ijen2a.jpg">
 </div>
 
 <?php include 'index/top_navbar.php'; ?>

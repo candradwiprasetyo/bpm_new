@@ -4,7 +4,7 @@
 	<!-- Recent News -->
 	<div class="eight columns">
 
-		<h3 class="margin-1">Berita  <span>Terbaru</span></h3>
+		<a href="index.php?page=content&id_menu=6"><h3 class="margin-1">Berita  <span>Terbaru</span></h3></a>
 		<?php
 		$query_news1 = mysql_query("SELECT * FROM news_menu WHERE news_cat_id = 6 and active_status = '1' ORDER BY news_date DESC LIMIT 0,2");
 			while($row_news1 = mysql_fetch_array($query_news1)){
@@ -16,7 +16,8 @@
 					<span class="month"><?= format_only_month($row_news1['news_date']); ?></span>
 				</section>
 
-				<h4><img src="<?php echo $row_news1['news_img'] ?>" class="news-img"><a href="blog-post.html"><?= $row_news1['news_title']?></a></h4>
+				<a href="index.php?page=content&id_menu=6&news_id=<?= $row_news1['news_id'] ?>"><h4><img src="<?php echo $row_news1['news_img'] ?>" class="news-img">
+				<?= $row_news1['news_title']?></h4></a>
 				<p>
 					<?php
 						$a = explode(" ",$row_news1['news_desc_index']);
@@ -48,8 +49,10 @@
 						<?php
 						$query_news3 = mysql_query("SELECT * FROM news where news_cat_id = '4' and active_status = '1' ORDER BY news_id DESC LIMIT 0,10");
 						while($row_news3 = mysql_fetch_array($query_news3)){
-						?>                 
+						?>     
+						<a href="index.php?page=read&num=<?= $row_news3['news_id'] ?>">            
 						<li class="sign-up"><i class="icon-check-circle"></i><?php echo $row_news3['news_title']; ?></li>
+					</a>
 						<?php
 						}
 						?>

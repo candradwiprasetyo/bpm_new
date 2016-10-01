@@ -2,7 +2,7 @@
 <div class="container floated">
 	<div class="blank floated">
 		<section class="entire">
-				<h3>Kinerja Investasi <span>dan Indikator Kinerja Utama</span></h3>
+				<a href="index.php?page=news&news_cat_id=0"><h3>Kinerja Investasi <span>dan Indikator Kinerja Utama</span></h3></a>
 				
 			</section>
 		<!-- Recent Work Entire -->
@@ -33,7 +33,7 @@
 				?>
 				<!-- Recent Work Item -->
 				<li class="four columns">
-					<a href="single-project.html" class="portfolio-item">
+					<a href="index.php?page=read&num=<?= $row_news1['news_id']?>" class="portfolio-item">
 						<figure>
 							<img src="<?php echo $row_news1['news_img'] ?>" alt=""/>
 							<figcaption class="item-description">

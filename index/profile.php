@@ -51,6 +51,8 @@
 				}
 				?>
 			</select>
+			<br>
+		<a href="javascript: history.back()" class="button gray medium">Cari</a>
 			</div>
 
 			
@@ -61,7 +63,7 @@
 		<div class="one-third column">
 			<article class="icon-box">
 				
-				<h3>Pejabat Pengelola Informasi</h3>
+			<a href="index.php?page=content&id_menu=4"><h3>Pejabat Pengelola Informasi</h3></a>
 				<?php
 				 	$query_news1 = mysql_query("SELECT * FROM news_menu WHERE news_cat_id = '4' and active_status = '1' ORDER BY news_lock_id desc, news_id DESC LIMIT 0,2");
 					//$query_news1 = mysql_query("SELECT * FROM news WHERE news_cat_id = 1 and active_status = '1'  ORDER BY news_date DESC LIMIT 0,2");
@@ -70,13 +72,13 @@
 				<article class="">
 					<div class="medium-image-home">
 						<figure class="post-img picture">
-							<a href="blog-post.html"><img src="<?php echo $row_news1['news_img'] ?>" alt=""></a>
+							<a href="index.php?page=content&id_menu=4&news_id=<?= $row_news1['news_id']?>"><img src="<?php echo $row_news1['news_img'] ?>" alt=""></a>
 						</figure>
 					</div>
 
 					<div class="medium-content-home">
 						<header class="meta">
-							<div class="medium-content-title"><a href="blog-post.html"><?= $row_news1['news_title']?></a></div>
+							<div class="medium-content-title"><a href="index.php?page=content&id_menu=4&news_id=<?= $row_news1['news_id']?>"><?= $row_news1['news_title']?></a></div>
 							
 							<span><i class="icon-calendar medium-calendar"></i><a href="#"><?= format_date($row_news1['news_date']) ?></a></span>
 						</header>
@@ -107,7 +109,7 @@
 		<div class="one-third column">
 			<article class="icon-box">
 				
-				<h3>Agenda Kegiatan</h3>
+				<a href="index.php?page=news&news_cat_id=3"><h3>Agenda Kegiatan</h3></a>
 				 <?php
 				$query_news2 = mysql_query("SELECT * FROM news WHERE news_cat_id = 3 and active_status = '1'  ORDER BY news_date DESC LIMIT 0,2");
 					while($row_news2 = mysql_fetch_array($query_news2)){
@@ -115,13 +117,13 @@
 				<article class="">
 					<div class="medium-image-home">
 						<figure class="post-img picture">
-							<a href="blog-post.html"><img src="<?php echo $row_news2['news_img'] ?>" alt=""></a>
+							<a href="index.php?page=read&num=<?= $row_news2['news_id']?>"><img src="<?php echo $row_news2['news_img'] ?>" alt=""></a>
 						</figure>
 					</div>
 
 					<div class="medium-content-home">
 						<header class="meta">
-							<div class="medium-content-title"><a href="blog-post.html"><?= $row_news2['news_title']?></a></div>
+							<div class="medium-content-title"><a href="index.php?page=read&num=<?= $row_news2['news_id']?>"><?= $row_news2['news_title']?></a></div>
 							
 							<span><i class="icon-calendar medium-calendar"></i><a href="#"><?= format_date($row_news2['news_date']) ?></a></span>
 						</header>

@@ -1,11 +1,16 @@
 <?php
-$q_cat = mysql_query("select * from menus where id_menu ='".abs((int)$_GET['id_menu'])."'");
-$r_cat = mysql_fetch_array($q_cat);
+$news_cat_id = abs((int)$_GET['news_cat_id']);
+$name = array(
+		'Kinerja Investasi dan Indikator Kinerja Utama',
+		'Potensi Investasi',
+		'Berita',
+		'Agenda Kegiatan',
+		'Peraturan Terkait'
+		);
 
 if($_GET['page'] == "content"){
-	$link_search = "index.php?page=".$_GET['page']."&id_menu=".abs((int)$_GET['id_menu']);
+	$link_search = "index.php?page=".$_GET['page']."&news_cat_id=".abs((int)$_GET['news_cat_id']);
 }
-
 ?>
 <div id="content">
 
@@ -15,13 +20,13 @@ if($_GET['page'] == "content"){
 
 	<div class="sixteen floated page-title">
 
-		<h2><?= $r_cat['name']?></h2>
+		<h2><?= $name[$news_cat_id]?></h2>
 
 		<nav id="breadcrumbs">
 			<ul>
 				<!-- <li>You are here:</li> -->
 				
-				<li><?= $r_cat['name']?></li>
+				<li><?= $name[$news_cat_id]?></li>
 			</ul>
 		</nav>
 
@@ -40,14 +45,13 @@ if($_GET['page'] == "content"){
 
 		<?php
 		if(!isset($_GET['news_id'])){
-			$q_max = mysql_query("select max(news_id) as new_id from news_menu where news_cat_id = '".abs((int)$_GET['id_menu'])."' and active_status = '1'");
+			$q_max = mysql_query("select max(news_id) as new_id from news where news_cat_id = '".$_GET['news_cat_id']."' and active_status = '1'");
 			$r_max = mysql_fetch_array($q_max);
 			$news_id = $r_max['new_id'];
 		}else{
 	    	$news_id = $_GET['news_id'];
 		}
-
-		$query_pub = mysql_query("SELECT * FROM news_menu where news_id = '$news_id'");
+		$query_pub = mysql_query("SELECT * FROM news where news_id = '$news_id'");
 	    $data_pub = mysql_fetch_array($query_pub);
 		?>
 			<h3 style="margin-top: -10px;"><?php echo $data_pub['news_title'] ?></h3>
@@ -63,8 +67,9 @@ if($_GET['page'] == "content"){
 			<?= $data_pub['news_content']?></p>
 
 			<br>
+			
 	
-		<a href="javascript: history.back()" class="button gray medium">Kembali</a>
+		<a href="javascript: history.back()" class="button gray medium">Kembali</a>			
 
 		</div>
 	</div>
@@ -93,11 +98,11 @@ if($_GET['page'] == "content"){
 					if(isset($_POST['search_content'])){
 					  	$where = "and news_title like '%".$_POST['search_content']."%'"; 
 					}
-					$query = "SELECT * FROM news_menu WHERE news_cat_id = '".abs((int)$_GET['id_menu'])."' and active_status = '1' $where ORDER BY news_lock_id desc, news_id DESC";
+					$query = "SELECT * FROM news WHERE news_cat_id = '".abs((int)$_GET['news_cat_id'])."' and active_status = '1' $where ORDER BY news_id DESC";
 					$excute = mysql_query($query);
 					while($data = mysql_fetch_array($excute)){
 					?>
-					<li><a href="index.php?page=content&id_menu=<?php echo abs((int)$_GET['id_menu'])?>&news_id=<?= $data['news_id']?>"><?= $data['news_title']?></a></li>
+					<li><a href="index.php?page=news&news_cat_id=<?php echo abs((int)$_GET['news_cat_id'])?>&news_id=<?= $data['news_id']?>"><?= $data['news_title']?></a></li>
 					<?php
 					}
 					?>

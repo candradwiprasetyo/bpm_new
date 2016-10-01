@@ -19,6 +19,10 @@
 <div class="container">
 	<div class="page-content">	
 		<p><?= $data['content']?></p>
+
+			<br>
+	
+		<a href="javascript: history.back()" class="button gray medium">Kembali</a>
 	</div>
 </div>
 <!-- End 960 Container -->

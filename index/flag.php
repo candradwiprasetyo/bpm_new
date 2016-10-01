@@ -1,3 +1,5 @@
+<?php 
+/*
 <div id="flag">
 
   <div class="translation-links">
@@ -78,3 +80,5 @@ $('.translation-links a').click(function(e)
 });
 
 </script>
+*/
+?>
