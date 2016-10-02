@@ -55,6 +55,25 @@
 					
             ?>
 			<li><a href="<?php echo $link2?>"><?= $r_menu2['name']?></a>
+				 <?php
+                    $q_menu3 = mysql_query("select * from menus where level = '3' and id_parent ='".$r_menu2['id_menu']."' order by id_menu");
+                    $jml3 = mysql_num_rows($q_menu3);
+                    if($jml3 > 0){ 
+                    	?>
+					<ul>
+					<?php
+                    	while($r_menu3 = mysql_fetch_array($q_menu3)){
+                    ?>
+					<li><a href="index.php?page=content&id_menu=<?php echo $r_menu3['id_menu']?>"><?= $r_menu3['name']?></a></li>
+					<?php
+					}
+					
+					?>
+				</ul>
+				<?php
+				}
+				?>
+			</li>
 			<?php
 			$i2++;
             }

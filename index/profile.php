@@ -38,7 +38,7 @@
 
 			<div class="box-kabupaten">
 			<div class="title">Informasi Investasi di Kabupaten/Kota:</div>
-			<select name="i_search_kabupaten" class="select">
+			<select name="i_search_kabupaten" id="i_search_kabupaten" class="select" onselect="get_kabupaten()">
 				<option value="0">Pilih Kab/Kota</option>
 		        <?php
 		        $q_city = mysql_query("select * from cities");
@@ -52,7 +52,7 @@
 				?>
 			</select>
 			<br>
-		<a href="javascript: history.back()" class="button gray medium">Cari</a>
+			<a class="button gray medium" onclick="get_kabupaten()">Cari</a>
 			</div>
 
 			
@@ -156,3 +156,15 @@
 	
 </div>
 <!-- 960 Container / End -->
+
+<script type="text/javascript">
+function get_kabupaten(){
+	var e = document.getElementById("i_search_kabupaten");
+	var value = e.options[e.selectedIndex].value;
+	if(value==0){
+		alert('Pilih kabupaten terlebih dahulu');
+	}else{
+		window.location = 'index.php?page=news_city&city_id='+value;
+	}
+}
+</script>

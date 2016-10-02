@@ -20,6 +20,7 @@ include 'libraries/lib.php';
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/colors/blue.css" id="colors">
+<link rel="shortcut icon" href="img/images/favicon.ico">
 
 <!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

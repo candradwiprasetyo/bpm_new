@@ -72,41 +72,50 @@ if($_GET['page'] == "content"){
 
 
 	<!-- Sidebar -->
-	<div class="four floated sidebar right">
-		<aside class="sidebar">
+	<div class="four_new floated sidebar right" style="padding:0px;">
+		<aside class="sidebar" style="padding:0px">
+
 
 			<!-- Search -->
 			<nav class="widget-search">
 				<form name="form1" method="post" enctype="multipart/form-data" action="<?php echo $link_search; ?>">
 					<button class="search-btn-widget"></button>
-					<input class="search-field" type="text" onblur="if(this.value=='')this.value='Search';" onfocus="if(this.value=='Search')this.value='';" value="Search" name="search_content">
+					<input class="search-field" type="text" placeholder="Cari disini" value="<?= (isset($_POST['search_content'])) ? $_POST['search_content'] : ''; ?>" name="search_content">
 				</form>
 			</nav>
 			<div class="clearfix"></div>
 
+			
+
 			<!-- Categories -->
 			<nav class="widget">
-				<h4>Categories</h4>
-				<ul class="categories">
-					<?php
-					$where = '';
-					if(isset($_POST['search_content'])){
-					  	$where = "and news_title like '%".$_POST['search_content']."%'"; 
-					}
-					$query = "SELECT * FROM news_menu WHERE news_cat_id = '".abs((int)$_GET['id_menu'])."' and active_status = '1' $where ORDER BY news_lock_id desc, news_id DESC";
-					$excute = mysql_query($query);
-					while($data = mysql_fetch_array($excute)){
-					?>
-					<li><a href="index.php?page=content&id_menu=<?php echo abs((int)$_GET['id_menu'])?>&news_id=<?= $data['news_id']?>"><?= $data['news_title']?></a></li>
-					<?php
-					}
-					?>
-				</ul>
+				
+				<div class="pricing-table">
+				<div class="color-1">
+					<ul>
+						<?php
+						$where = '';
+						if(isset($_POST['search_content'])){
+						  	$where = "and news_title like '%".$_POST['search_content']."%'"; 
+						}
+						$query = "SELECT * FROM news_menu WHERE news_cat_id = '".abs((int)$_GET['id_menu'])."' and active_status = '1' $where ORDER BY news_lock_id desc, news_id DESC";
+						$excute = mysql_query($query);
+						while($data = mysql_fetch_array($excute)){
+						?>     
+						<a href="index.php?page=content&id_menu=<?php echo abs((int)$_GET['id_menu'])?>&news_id=<?= $data['news_id']?>">            
+						<li class="sign-up"><i class="icon-check-circle"></i><?= $data['news_title']?></li>
+						</a>
+						<?php
+						}
+						?>
+					</ul>
+					<br>
+				</div>
+			</div>
 			</nav>
-
 		
 			
-		</aside>
+		<aside>
 	</div>
 	<!-- Sidebar / End -->
 

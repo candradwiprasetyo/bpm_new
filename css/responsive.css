@@ -50,6 +50,7 @@
     
     .container .four.columns,
     .container .four.floated                    { width: 220px; }
+    .container .four_new.floated                { width: 300px; }
     
     .container .five.columns,
     .container .five.floated                    { width: 280px; }
@@ -148,6 +149,8 @@
         
         .container .four.columns,
         .container .four.floated                    { width: 154px; }
+        .container .four_new.floated                { width: 210px; }
+
         
         .container .five.columns,
         .container .five.floated                    { width: 196px; }
@@ -267,6 +270,7 @@
         .container .sixteen.floated,
         .container .one-third.column,
         .container .two-thirds.column { width: 260px; }
+        .container .four_new.floated{ width: 100%; }
 
         .container .ten.floated{ width: 320px;  }
         /* Offsets */
