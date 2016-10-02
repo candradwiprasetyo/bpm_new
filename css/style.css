@@ -3138,6 +3138,7 @@ input[type="submit"]:hover { background:#aaa; }
 	padding: 32px;
 	-webkit-box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
 	box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
+	margin-bottom: 20px;
 }
 
 .large-notice h2 {
@@ -3218,11 +3219,23 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 }
 
 .testimonials {
+	background: #169fe6;
+	color: #fff;
+	padding: 5px;
+	padding-left: 10px;
+	font-weight: bold;
+	line-height: 21px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.testimonials-answer {
 	background: #f6f6f6;
 	color: #888;
 	padding: 25px;
 	line-height: 21px;
-	border-radius: 2px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	-webkit-box-shadow:: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 	box-shadow: inset 0px -1px 0px 0px rgba(0,0,0, 0.06);
 }
@@ -3493,7 +3506,8 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 /* Pricing Tables
 ====================================================================== */
 .pricing-table {
-
+	float: left;
+	margin: 1px 0 0 -1px;
 }
 
 .pricing-table h3 {
@@ -3503,10 +3517,12 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 	padding: 6px 0;
 	margin: 0;
 	font-weight: 200;
+	height: 70px;
 }
 
 .pricing-table ul {
-	border: 1px solid #eee;
+	padding: 10px 0 0 0;
+	border: 1px solid #e0e0e0;
 	border-top: 0;
 	background: #fff;
 	-webkit-box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
@@ -3516,10 +3532,53 @@ table.standard-table tr:hover td {background-color: #fafafa;}
 .pricing-table li {
 	color: #888;
 	background: #fff;
+	text-align: center;
 	padding: 4px 0;
 }
 
-li.sign-up {
+.pricing-table li.sign-up {
+	border-top: 1px solid #e0e0e0;
+	background: #fafafa;
+	padding: 12px 0;
+	margin-top: 10px;
+}
+
+.pricing-table li.sign-up a { font-weight: 200; letter-spacing: 0; }
+.pricing-table li.sign-up a:hover { opacity: 0.8; filter: alpha(opacity=80); }
+
+
+
+/* =================================================================== */
+/* Pricing Tables New
+====================================================================== */
+.pricing-table-new {
+
+}
+
+.pricing-table-new h3 {
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	padding: 6px 0;
+	margin: 0;
+	font-weight: 200;
+}
+
+.pricing-table-new ul {
+	border: 1px solid #eee;
+	border-top: 0;
+	background: #fff;
+	-webkit-box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
+	box-shadow:  0px 2px 0px 0px rgba(0, 0, 0, 0.03);
+}
+
+.pricing-table-new li {
+	color: #888;
+	background: #fff;
+	padding: 4px 0;
+}
+
+.pricing-table-new li.sign-up {
 	border-top: 1px solid #eee;
 	background: #fff;
 	padding: 12px 0;
@@ -3528,17 +3587,17 @@ li.sign-up {
 	cursor: pointer;
 }
 
-li.sign-up:hover {
+.pricing-table-new li.sign-up:hover {
 	background: #fafafa;
 }
 
-li.sign-up .icon-check-circle{
+.pricing-table-new li.sign-up .icon-check-circle{
 	margin-right: 5px;
 	font-size: 14px;
 }
 
-li.sign-up a { font-weight: 200; letter-spacing: 0; }
-li.sign-up a:hover { opacity: 0.8; filter: alpha(opacity=80); }
+.pricing-table-new li.sign-up a { font-weight: 200; letter-spacing: 0; }
+.pricing-table-new li.sign-up a:hover { opacity: 0.8; filter: alpha(opacity=80); }
 
 
 /* Table
@@ -4885,6 +4944,41 @@ input[type=search][type=search]::-webkit-input-placeholder {
 
 .goog-te-banner-frame{
 	display: none;
+}
+
+.album-count{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color:#fff;
+	background: #999;
+	position: absolute;
+	right: 10px;
+	margin-top: -40px;
+	border-radius:4px; 
+	font-weight: bold;
+}
+
+.album-date{
+	font-size: 11px;
+	font-weight: bold;
+	color: #78ADC9;
+}
+
+.list-kabupaten{
+	width: 100%;
+	border:1px solid #eee;
+	margin-bottom: 20px;
+}
+
+.list-kabupaten .title{
+	background: #e8e8e8;
+	padding:10px;
+	font-weight: bold;
+}
+.list-kabupaten .desc{
+	padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {

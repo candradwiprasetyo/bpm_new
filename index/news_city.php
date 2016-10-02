@@ -104,7 +104,7 @@ if($_GET['page'] == "news_city"){
 			<!-- Categories -->
 			<nav class="widget">
 				
-				<div class="pricing-table">
+				<div class="pricing-table-new">
 				<div class="color-1">
 					<ul>
 						<?

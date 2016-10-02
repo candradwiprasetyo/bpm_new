@@ -43,7 +43,7 @@
 		<h3 class="margin-1">Peraturan  <span>Terkait</span></h3>
 
 		<div class="eight columns alpha">
-			<div class="pricing-table">
+			<div class="pricing-table-new">
 				<div class="color-1">
 					<ul>
 						<?php
